@@ -1,0 +1,132 @@
+@font-face {
+  font-family: "sans";
+  src: url("../fonts/Roboto-VariableFont_wdth,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+* {
+  font-family: "sans";
+  scroll-behavior: smooth;
+}
+
+section {
+  margin-top: 70px;
+}
+
+
+
+.effAtage li a::after {
+
+  content: '';
+  background-color: #a60dcf;
+  height: 2px;
+  width: 0%;
+  position: absolute;
+  top: 125%;
+  left: 0;
+  transition: 0.2s all;
+
+}
+
+.effAtage li a:hover::after {
+
+  width: 100%;
+
+}
+
+
+.btn_effect::after {
+  content: "";
+  position: absolute;
+  background-color: #F9218D;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  z-index: -1;
+  transition: all .5s cubic-bezier(.5, 1.6, .4, .7);
+
+}
+
+
+.eff:hover .btn_effect::after {
+  width: 100%;
+}
+
+
+.pricing::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-image: url('./img/laptop.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  height: 60%;
+}
+
+.pricing::after {
+
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: -webkit-linear-gradient(0deg, #f9218d 0%, #6c19f6 100%);
+  opacity: .95;
+  height: 60%;
+}
+
+.pricing>* {
+
+  position: relative;
+  z-index: 2;
+}
+
+.Device::after {
+
+  content: '';
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: -webkit-linear-gradient(0deg, #6c19f6 0% 0%, #f9218d 100%);
+
+
+
+}
+
+
+@keyframes scaleInfinite {
+
+  0%,
+  100% {
+    transform: scale(0.7);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.scale-infinite {
+  animation: scaleInfinite 2s infinite ease-in-out;
+}
+
+
+@keyframes shape {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+
+}
+
+.shape {
+  animation: shape 20s linear infinite;
+}
