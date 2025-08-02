@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Gamal - Frontend Developer</title>
+    
+     <link rel="icon" href="./favicon-32x32.png" type="image/x-icon" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .typing-animation {
+            border-right: 2px solid #667eea;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+
+            0%,
+            50% {
+                border-color: #667eea;
+            }
+
+            51%,
+            100% {
+                border-color: transparent;
+            }
+        }
+
+        .skill-bar {
+            height: 8px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 4px;
+            transform-origin: left;
+        }
+
+        .project-card {
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .float {
+            display: inline-block;
+            animation: float 2s infinite ease-in-out;
+        }
+
+        * {
+            scroll-behavior: smooth;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 font-sans">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-[#5848c2bf] animate__animated animate__fadeInDown">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold text-white"><i id="icon"
+                        class=" text-[#fdfd67] text-3xl animate__animated animate__tada animate__infinite fa-solid fa-face-smile"></i>
+                </div>
+                <div class="hidden md:flex space-x-8 ">
+                    <a href="#home" class="text-white hover:text-purple-300 transition-colors">Home</a>
+                    <a href="#about" class="text-white hover:text-purple-300 transition-colors">About</a>
+                    <a href="#skills" class="text-white hover:text-purple-300 transition-colors">Skills</a>
+                    <a href="#projects" class="text-white hover:text-purple-300 transition-colors">Projects</a>
+
+                </div>
+                <button class="md:hidden text-white">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen gradient-bg flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-20"></div>
+        <div class="relative z-10 text-center text-white px-4">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 flex space-x-2 text-yellow-300">
+                <span class="float" style="animation-delay: 0s;">M</span>
+                <span class="float" style="animation-delay: 0.1s;">o</span>
+                <span class="float" style="animation-delay: 0.2s;">h</span>
+                <span class="float" style="animation-delay: 0.3s;">a</span>
+                <span class="float" style="animation-delay: 0.4s;">m</span>
+                <span class="float" style="animation-delay: 0.5s;">e</span>
+                <span class="float" style="animation-delay: 0.6s;">d</span>
+                <span class="w-2"></span>
+                <span class="float" style="animation-delay: 0.7s;">G</span>
+                <span class="float" style="animation-delay: 0.8s;">a</span>
+                <span class="float" style="animation-delay: 0.9s;">m</span>
+                <span class="float" style="animation-delay: 1s;">a</span>
+                <span class="float" style="animation-delay: 1.1s;">l</span>
+            </h1>
+
+            <p class="text-xl md:text-2xl mb-8 typing-animation animate__animated animate__fadeInUp animate__delay-1s">
+                Frontend Developer
+            </p>
+            <div class="flex justify-center space-x-6 mb-12 animate__animated animate__fadeInUp animate__delay-2s">
+                <a href="https://github.com/MohamedAbusarea" target="_blank" class="text-2xl hover:text-purple-400 transition-colors">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/mohamed-gamal-75568533b" target="_blank" class="text-2xl hover:text-purple-400 transition-colors">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.facebook.com/sa.so649" target="_blank" class="text-2xl hover:text-purple-400 transition-colors">
+                    <i class="fab fa-facebook"></i>
+                </a>
+            </div>
+            <a href="#about"
+                class="inline-block bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-purple-100 transition-colors animate__animated animate__fadeInUp animate__delay-3s">
+                Discover My Work
+            </a>
+        </div>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-white text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">About Me</h2>
+                <div class="w-20 h-1 bg-purple-600 mx-auto"></div>
+            </div>
+
+
+
+            <div class="container mx-auto px-4 py-16">
+                <div data-aos="fade-up" class="text-center mb-12">
+                    <h1 class="text-4xl font-bold mb-4 animate__animated animate__fadeInDown">Mohamed Gamal</h1>
+                    <p class="text-gray-600 text-lg">Frontend Developer & Application Support</p>
+                </div>
+
+                <div class="grid md:grid-cols-1 gap-10 items-center">
+                    <div data-aos="fade-right">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">About Me</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            I have 1 year of experience in Support Applications, helping users and solving technical
+                            issues.
+                            I am currently learning Frontend Development with a focus on HTML, CSS, JavaScript, and
+                            React.
+                        </p>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            I'm passionate about building clean and responsive web interfaces and constantly exploring
+                            new technologies.
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">Fast
+                                Learner</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Problem Solver</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">Team Player</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Skills & Expertise</h2>
+                <div class="w-20 h-1 bg-purple-600 mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Frontend Skills -->
+                <div class="bg-white rounded-xl p-6 shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-code text-4xl text-purple-600 mb-4"></i>
+                        <h3 class="text-xl font-bold text-gray-800">Frontend</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm font-medium text-gray-700">HTML/CSS</span>
+                                <span class="text-sm text-gray-500">85%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar rounded-full h-2 bg-purple-600" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm font-medium text-gray-700">JavaScript</span>
+                                <span class="text-sm text-gray-500">75%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar rounded-full h-2 bg-purple-600" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm font-medium text-gray-700">React (Learning)</span>
+                                <span class="text-sm text-gray-500">60%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar rounded-full h-2 bg-purple-600" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Frameworks -->
+                <div class="bg-white rounded-xl p-6 shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-tools text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-bold text-gray-800">Tools & Frameworks</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm font-medium text-gray-700">Tailwind CSS</span>
+                                <span class="text-sm text-gray-500">80%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar rounded-full h-2 bg-blue-600" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm font-medium text-gray-700">Git & GitHub</span>
+                                <span class="text-sm text-gray-500">70%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar rounded-full h-2 bg-blue-600" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm font-medium text-gray-700">Debugging & Troubleshooting</span>
+                                <span class="text-sm text-gray-500">85%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar rounded-full h-2 bg-blue-600" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="bg-white rounded-xl p-6 shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-user-friends text-4xl text-green-600 mb-4"></i>
+                        <h3 class="text-xl font-bold text-gray-800">Soft Skills</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm font-medium text-gray-700">Problem Solving</span>
+                                <span class="text-sm text-gray-500">90%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar rounded-full h-2 bg-green-600" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm font-medium text-gray-700">Teamwork</span>
+                                <span class="text-sm text-gray-500">85%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar rounded-full h-2 bg-green-600" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm font-medium text-gray-700">Continuous Learning</span>
+                                <span class="text-sm text-gray-500">95%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar rounded-full h-2 bg-green-600" style="width: 95%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Featured Projects</h2>
+                <div class="w-20 h-1 bg-purple-600 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop"
+                            alt="Project 1" class="w-full h-48 object-cover">
+                        <div
+                            class="absolute inset-0 bg-purple-600 opacity-0 hover:opacity-90 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <a href="#"
+                                    class="inline-block bg-white text-purple-600 px-4 py-2 rounded-lg mr-2 hover:bg-gray-100">
+                                    <i class="fas fa-eye"></i> View
+                                </a>
+                                <a href="#"
+                                    class="inline-block bg-white text-purple-600 px-4 py-2 rounded-lg hover:bg-gray-100">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">E-Commerce Dashboard</h3>
+                        <p class="text-gray-600 mb-4">A modern dashboard for e-commerce analytics with real-time data
+                            visualization.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 text-xs rounded-full">React</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-600 text-xs rounded-full">Chart.js</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-600 text-xs rounded-full">Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=250&fit=crop"
+                            alt="Project 2" class="w-full h-48 object-cover">
+                        <div
+                            class="absolute inset-0 bg-purple-600 opacity-0 hover:opacity-90 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <a href="#"
+                                    class="inline-block bg-white text-purple-600 px-4 py-2 rounded-lg mr-2 hover:bg-gray-100">
+                                    <i class="fas fa-eye"></i> View
+                                </a>
+                                <a href="#"
+                                    class="inline-block bg-white text-purple-600 px-4 py-2 rounded-lg hover:bg-gray-100">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Task Management App</h3>
+                        <p class="text-gray-600 mb-4">Collaborative task management application with drag-and-drop
+                            functionality.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 text-xs rounded-full">Vue.js</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-600 text-xs rounded-full">Firebase</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-600 text-xs rounded-full">SCSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up"
+                    data-aos-delay="300">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop"
+                            alt="Project 3" class="w-full h-48 object-cover">
+                        <div
+                            class="absolute inset-0 bg-purple-600 opacity-0 hover:opacity-90 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <a href="#"
+                                    class="inline-block bg-white text-purple-600 px-4 py-2 rounded-lg mr-2 hover:bg-gray-100">
+                                    <i class="fas fa-eye"></i> View
+                                </a>
+                                <a href="#"
+                                    class="inline-block bg-white text-purple-600 px-4 py-2 rounded-lg hover:bg-gray-100">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Weather App</h3>
+                        <p class="text-gray-600 mb-4">Beautiful weather application with location-based forecasts and
+                            animations.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 text-xs rounded-full">JavaScript</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-600 text-xs rounded-full">API</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-600 text-xs rounded-full">CSS3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 gradient-bg relative">
+        <!-- Overlay Dark Background -->
+        <div class="absolute inset-0 bg-black opacity-20"></div>
+
+        <div class="relative z-10 max-w-4xl mx-auto px-4">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-white mb-2">Get in Touch</h2>
+                <div class="w-20 h-1 bg-white mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 text-white">
+                <!-- Email -->
+                <div class="flex items-center gap-2 bg-white bg-opacity-20 p-4 rounded-lg" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <div class="w-10 h-10 flex items-center justify-center bg-white bg-opacity-30 rounded-full">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg">Email</h3>
+                        <p class="text-sm break-words">Mohamed.Abusarea@gmail.com</p>
+                    </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="flex items-center gap-2 bg-white bg-opacity-20 p-4 rounded-lg" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <div class="w-10 h-10 flex items-center justify-center bg-white bg-opacity-30 rounded-full">
+                        <i class="fas fa-phone text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg">Phone</h3>
+                        <p class="text-sm">01080070019 | 01100332630</p>
+                    </div>
+                </div>
+
+                <!-- Location -->
+                <div class="flex items-center gap-4 bg-white bg-opacity-20 p-4 rounded-lg" data-aos="fade-up"
+                    data-aos-delay="300">
+                    <div class="w-10 h-10 flex items-center justify-center bg-white bg-opacity-30 rounded-full">
+                        <i class="fas fa-map-marker-alt text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg">Location</h3>
+                        <p class="text-sm">Giza, Egypt</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="https://github.com/MohamedAbusarea" target="_blank" class="text-2xl hover:text-purple-400 transition-colors">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/mohamed-gamal-75568533b" target="_blank" class="text-2xl hover:text-purple-400 transition-colors">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.facebook.com/sa.so649" target="_blank" class="text-2xl hover:text-purple-400 transition-colors">
+                    <i class="fab fa-facebook"></i>
+                </a>
+
+            </div>
+            <p class="text-gray-400">&copy; 2025 Mohamed Gamal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            // once: true,
+            offset: 100
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Typing animation
+        const typingText = document.querySelector('.typing-animation');
+        if (typingText) {
+            const texts = ['Frontend Developer', 'React Developer', 'Creative Problem Solver'];
+            let textIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+
+            function typeWriter() {
+                const currentText = texts[textIndex];
+
+                if (isDeleting) {
+                    typingText.textContent = currentText.substring(0, charIndex - 1);
+                    charIndex--;
+                } else {
+                    typingText.textContent = currentText.substring(0, charIndex + 1);
+                    charIndex++;
+                }
+
+                if (!isDeleting && charIndex === currentText.length) {
+                    setTimeout(() => isDeleting = true, 2000);
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    textIndex = (textIndex + 1) % texts.length;
+                }
+
+                setTimeout(typeWriter, isDeleting ? 50 : 100);
+            }
+
+            setTimeout(typeWriter, 3000);
+        }
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('button');
+        const mobileMenu = document.createElement('div');
+        mobileMenu.className = 'md:hidden absolute top-full left-0 w-full glass-effect';
+        mobileMenu.innerHTML = `
+            <div class="px-4 py-6 space-y-4 bg-[#5848c2bf]">
+                <a href="#home" class="block text-white hover:text-purple-300 transition-colors">Home</a>
+                <a href="#about" class="block text-white hover:text-purple-300 transition-colors">About</a>
+                <a href="#skills" class="block text-white hover:text-purple-300 transition-colors">Skills</a>
+                <a href="#projects" class="block text-white hover:text-purple-300 transition-colors">Projects</a>
+                <a href="#contact" class="block text-white hover:text-purple-300 transition-colors">Contact</a>
+            </div>
+        `;
+
+        let menuOpen = false;
+        mobileMenuBtn.addEventListener('click', () => {
+            if (!menuOpen) {
+                mobileMenuBtn.parentNode.parentNode.appendChild(mobileMenu);
+                menuOpen = true;
+            } else {
+                if (mobileMenu.parentNode) {
+                    mobileMenu.parentNode.removeChild(mobileMenu);
+                }
+                menuOpen = false;
+            }
+        });
+
+        // Skill bar animation on scroll
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const skillObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const skillBars = entry.target.querySelectorAll('.skill-bar');
+                    skillBars.forEach(bar => {
+                        bar.style.transform = 'scaleX(1)';
+                        bar.style.transformOrigin = 'left';
+                        bar.style.transition = 'transform 1.5s ease-out';
+                    });
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('#skills .bg-white').forEach(card => {
+            // Reset skill bars
+            card.querySelectorAll('.skill-bar').forEach(bar => {
+                bar.style.transform = 'scaleX(0)';
+            });
+            skillObserver.observe(card);
+        });
+
+
+        // Add active nav link highlighting
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('nav a[href^="#"]');
+
+        function highlightNavLink() {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-purple-300');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('text-purple-300');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', highlightNavLink);
+
+        // Counter animation for stats (if you want to add stats section)
+        function animateCounter(element, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                element.textContent = Math.floor(progress * (end - start) + start);
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        // Initialize particles effect for hero background
+        function createParticles() {
+            const hero = document.querySelector('#home');
+            const particlesContainer = document.createElement('div');
+            particlesContainer.className = 'absolute inset-0 overflow-hidden pointer-events-none';
+
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'absolute w-2 h-2 bg-white opacity-20 rounded-full';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 10 + 's';
+                particle.style.animation = `float ${5 + Math.random() * 10}s ease-in-out infinite`;
+                particlesContainer.appendChild(particle);
+            }
+
+            hero.insertBefore(particlesContainer, hero.firstChild);
+        }
+
+        // Add floating animation for particles
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes float {
+                0%, 100% { transform: translateY(0px) rotate(0deg); }
+                33% { transform: translateY(-30px) rotate(120deg); }
+                66% { transform: translateY(30px) rotate(240deg); }
+            }
+            
+            .project-card {
+                transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            }
+            
+            .project-card:hover {
+                transform: translateY(-15px) scale(1.02);
+            }
+            
+            .glass-effect {
+                transition: all 0.3s ease;
+            }
+            
+            .glass-effect:hover {
+                background: rgba(255, 255, 255, 0.15);
+            }
+            
+            /* Custom scrollbar */
+            ::-webkit-scrollbar {
+                width: 8px;
+            }
+            
+            ::-webkit-scrollbar-track {
+                background: #f1f1f1;
+            }
+            
+            ::-webkit-scrollbar-thumb {
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                border-radius: 4px;
+            }
+            
+            ::-webkit-scrollbar-thumb:hover {
+                background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+            }
+            
+            /* Smooth transitions for all interactive elements */
+            * {
+                transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Initialize particles
+        createParticles();
+
+        // Add loading screen
+        window.addEventListener('load', () => {
+            const loader = document.createElement('div');
+            loader.id = 'loader';
+            loader.className = 'fixed inset-0 z-50 flex items-center justify-center gradient-bg';
+            loader.innerHTML = `
+                <div class="text-center text-white">
+                    <div class="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-white mx-auto mb-4"></div>
+                    <p class="text-xl">Loading Portfolio...</p>
+                </div>
+            `;
+
+            document.body.appendChild(loader);
+
+            setTimeout(() => {
+                loader.style.opacity = '0';
+                setTimeout(() => {
+                    loader.remove();
+                }, 500);
+            }, 1500);
+        });
+
+        // Add scroll-to-top button
+        const scrollTopBtn = document.createElement('button');
+        scrollTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+        scrollTopBtn.className = 'fixed bottom-6 right-6 bg-purple-600 text-white p-3 rounded-full shadow-lg hover:bg-purple-700 transition-all opacity-0 pointer-events-none z-40';
+        scrollTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+        document.body.appendChild(scrollTopBtn);
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollTopBtn.style.opacity = '1';
+                scrollTopBtn.style.pointerEvents = 'auto';
+            } else {
+                scrollTopBtn.style.opacity = '0';
+                scrollTopBtn.style.pointerEvents = 'none';
+            }
+        });
+
+
+        document.addEventListener('scroll', (e) => {
+
+            console(e)
+
+        })
+
+
+    </script>
+    
+</body>
+
+</html>
