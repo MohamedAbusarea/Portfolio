@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Tracker</title>
+    <!-- <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css">
+    <link rel="stylesheet" href="../node_modules/aos/dist/aos.css"> -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-...hash..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        integrity="sha512-...hash..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- AOS (Animate On Scroll) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-...hash..."
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./output.css">
+</head>
+
+<body>
+
+    <div id="alert"
+        class="z-10 transition-all duration-500 absolute opacity-80  right-8 -top-12 w-fit p-4 mb-4 text-sm text-yellow-800 rounded-lg bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300 "
+        role="alert">
+        <span class="font-medium">Warning alert!</span> please enter valid data and try again like 'mohamed gamal'.
+    </div>
+
+
+    <section class="">
+        <div class="container grid grid-cols-1 gap-11 items-center justify-center">
+            <h1
+                class=" relative z-0 m-auto mt-12 title w-fit !text-4xl animate__animated animate__bounce animate__infinite  text-amber-600">
+                Personal
+                Finance Tracker</h1>
+            <div class="relative">
+                <div class=" grid lg:grid-cols-6 grid-cols-1 gap-11 items-center  ">
+                    <div class="flex justify-around lg:col-span-2 items-center  gap-2">
+                        <h2 class=" m-auto text-blue-300">Information data</h2>
+                        <i
+                            class=" fa-brands fa-waze animate__animated animate__bounce animate__infinite animate__slower"></i>
+                    </div>
+
+                    <form action="" id="dataInformatin"
+                        class="lg:col-span-4 grid  lg:grid-cols-3 gap-3 grid-cols-1 items-center">
+                        <input class="inpvalid w-full" type="text" id="name" placeholder="Name" required>
+                        <input class="inpvalid w-full" type="number" id="amount" placeholder="Amount" min="1000"
+                            required>
+
+                        <button type="submit" id="add " class=" !cursor-auto bg-transparent h-fit w-fit ">
+                            <i
+                                class="cursor-pointer !text-4xl text-green-500 hover:text-green-700 transition-all hover:scale-125 fa-solid fa-person-circle-plus h-fit w-fit"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-12 relative">
+        <div class="grid grid-cols-2 gap-11 relative ">
+            <div class="grid grid-cols-1 gap-11 items-center">
+                <button id="reset"
+                    class="relative -left-6 hover:left-0 rounded-r-lg transition-all bg-amber-700 text-white p-2 hover:bg-red-800 w-fit">
+                    Clear all</button>
+            </div>
+        </div>
+    </section>
+
+    <table id="dataTable" class="min-w-full divide-y divide-gray-200 border border-gray-300 rounded-lg shadow-sm my-11">
+        <thead class="bg-gray-100">
+            <tr class="divide-x divide-gray-200">
+                <th class="px-4 py-2 text-sm font-semibold text-gray-700 text-center">Name</th>
+                <th class="px-4 py-2 text-sm font-semibold text-gray-700 text-center">Salary</th>
+                <th class="px-4 py-2 text-sm font-semibold text-gray-700 text-center">Action</th>
+            </tr>
+        </thead>
+        <tbody id="transaction" class="bg-white divide-y divide-gray-200 ">
+
+        </tbody>
+    </table>
+
+
+
+    <!-- <script src="../node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script src="../node_modules/aos/dist/aos.cjs.js"></script> -->
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+
+    <!-- AOS (Animate On Scroll) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+        integrity="sha512-6rDrG4vddMgm0sdPIUWxRbwUFiGiH4XjJzP8M9KUq2d9PKrsEYN7xWVC5tUZfl8O4DPbgF0ddhYI5IpDfMG5mA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="../javascript/main.js"></script>
+</body>
+
+</html>

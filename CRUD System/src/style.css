@@ -1,0 +1,9 @@
+@font-face {
+    font-family:Goldman ;
+    src: url(./font/Goldman-Regular.ttf);
+}
+
+.title{
+    font-family: Goldman;
+   
+}
