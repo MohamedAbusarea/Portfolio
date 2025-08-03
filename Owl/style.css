@@ -1,0 +1,176 @@
+body {
+
+
+    font-family: 'Open Sans', sans-serif;
+}
+
+.section {
+
+    padding: 70px 0;
+}
+
+.icon-search::after {
+
+    content: "|";
+    position: absolute;
+    top: -7px;
+    left: -100%;
+    display: inline-block;
+    font-size: 2rem;
+    color: white;
+
+
+}
+
+
+nav::after,
+.mobile::after {
+
+    content: "";
+    position: absolute;
+    height: 1px;
+    background-color: #a2a2a2;
+    bottom: 0;
+    width: 90%;
+    z-index: -1;
+    margin: 0 auto;
+    left: 0;
+    right: 0
+}
+
+
+
+/* background for section modile */
+
+.mobile {
+
+    background-image: url(./img/4540284.jpg);
+}
+
+.mobile,
+.super_aswome,
+.awards,
+.john,
+.email,
+footer {
+
+
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+
+.mobile::after,
+.super_aswome::after,
+.awards::after,
+.john::after,
+.email::after,
+footer::after {
+
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+.mobile div .text_mobile div ul li::before {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f108';
+    font-weight: 900;
+    position: relative;
+    margin-right: 20px;
+    top: 1px;
+
+}
+
+
+/* section super */
+
+.super_aswome {
+
+    background-image: url(./img/footer.jpg);
+}
+
+
+/* section awards */
+
+
+.awards {
+
+    background-image: url(./img/stats.jpg);
+
+}
+
+
+
+.progress-bar::after {
+    content: attr(data-progress) '%';
+    position: absolute;
+    background-color: black;
+    color: white;
+    top: -40px;
+    right: -18px;
+    padding: 4px 0;
+    width: 40px;
+    text-align: center;
+    border-radius: 4px;
+
+}
+
+.progress-bar::before {
+
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 13px;
+    border-color: black transparent transparent transparent;
+    right: -8px;
+    top: -15px;
+}
+
+.john {
+
+    background-image: url(./img/stats.jpg);
+
+}
+
+.cards .card .price h1::after {
+
+    content: "$";
+    position: absolute;
+    top: -20px;
+    left: -30px;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+
+.cards .card .price h1::before {
+
+    content: "/mo";
+    position: absolute;
+    top: 20px;
+    left: 80px;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+
+.email {
+
+    background-image: url(./img/Subscribe.jpg);
+
+}
+
+footer {
+
+    background-image: url(./img/footer.jpg);
+
+}
