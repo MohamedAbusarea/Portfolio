@@ -1,0 +1,596 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+a {
+
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+ul {
+
+    list-style: none;
+}
+
+img {
+
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+}
+
+h1 {
+    margin-bottom: 40px;
+    font-size: 50px;
+    color: var(--mainColor);
+}
+
+i {
+    cursor: pointer;
+}
+
+body {
+
+
+
+    font-family: "Jersey 10", sans-serif;
+
+}
+
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+
+
+}
+
+section {
+
+    padding: 70px 0;
+
+}
+
+.section:nth-of-type(odd) {
+    background-color: #F1F1F1;
+
+}
+
+:root {
+    --mainColor: #111211;
+    --BackGround: #ff003c;
+}
+
+.btn {
+
+    border: none;
+    padding: 10px 30px;
+    background-color: #4A4A4B;
+    color: white;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+
+}
+
+.btn::before {
+
+    content: "";
+    position: absolute;
+    background-color: var(--BackGround);
+    z-index: -1;
+    width: 0%;
+    inset: 0;
+    transition: 0.5s cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+
+.btn:hover::before {
+    content: "";
+    background-color: var(--BackGround);
+    z-index: -1;
+    inset: 0;
+    width: 100%;
+}
+
+/* -------------------------------EndRole-------------------------------------------- */
+
+nav {
+
+    background-color: white;
+    box-shadow: 1px 4px 20px 0px #0000001f;
+    color: var(--mainColor);
+    padding: 0 45px;
+}
+
+nav .main {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .main .texLinks ul {
+    display: flex;
+    gap: 30px;
+    transition: 0.5s;
+}
+
+nav .main .texLinks>ul>li {
+    padding: 45px 0px;
+
+
+}
+
+nav .main .texLinks>ul>li a {
+
+    transition: 0.5s;
+}
+
+nav .main .texLinks>ul>li a:hover {
+    color: var(--BackGround);
+}
+
+nav .main .texLinks>ul>li {
+
+    position: relative;
+}
+
+nav .main .texLinks ul .hot>a::before {
+
+    content: "HOT";
+    position: absolute;
+    bottom: 100%;
+    right: -25px;
+    font-size: 12px;
+    background-color: var(--BackGround);
+    padding: 3px 8px;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 1px 2px 6px 0 #00000057;
+    margin-bottom: 5px;
+}
+
+nav .main .texLinks ul .hot>a {
+    position: relative;
+}
+
+nav .main .texLinks ul li .SubList {
+
+    position: absolute;
+    display: block;
+    background-color: rgb(250, 250, 250);
+    width: 180px;
+    padding: 20px 20px 20px 10px;
+    border-radius: 5px 5px 0 0;
+    border-top: solid 3px var(--BackGround);
+    box-shadow: 3px 2px 7px 0 #00000026;
+    top: 80%;
+    left: -10px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+
+}
+
+nav .main .texLinks ul li .SubList li {
+
+    line-height: 35px;
+
+}
+
+nav .main .texLinks>ul>li:hover .SubList {
+    visibility: visible;
+    opacity: 1;
+    top: 90%;
+}
+
+nav .main .texLinks>ul>li {
+
+    box-sizing: border-box;
+}
+
+nav .main .texLinks ul li .SubList::before {
+
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid var(--BackGround);
+    top: -10px;
+    right: 75%;
+
+
+}
+
+nav .main .icon {
+    display: flex;
+    gap: 40px;
+    font-size: 16px;
+}
+
+
+
+
+/* -------------------------------------------------------------------------  End Nav  ------------------------------------------------------------------------- */
+
+
+.PerfectStyle .container section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0px;
+    height: 650px;
+    overflow: hidden;
+}
+
+.PerfectStyle .container section .img {
+
+    width: 30%;
+
+}
+
+.PerfectStyle .container section .img img {
+
+
+    animation: watch 3s infinite;
+
+}
+
+.PerfectStyle .container section .text {
+    width: 60%;
+}
+
+.PerfectStyle .container section .text h1 {
+    font-size: 70px;
+    margin-bottom: 30px;
+    color: var(--mainColor);
+}
+
+.PerfectStyle .container section .text p {
+
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+@keyframes watch {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+
+        transform: scale(0.9);
+    }
+
+
+}
+
+
+/* <!-- -------------------------------------------------EndSection -> PerfectStyle----------------------------------------------------- --> */
+.arrivals .container section>div {
+
+
+    display: flex;
+    align-content: center;
+    text-align: center;
+    color: var(--mainColor);
+}
+
+.arrivals .container section>div div {
+
+    width: 90%;
+}
+
+.arrivals .container section>div div .img {
+
+    overflow: hidden;
+
+}
+
+.arrivals .container section>div div .img img:hover {
+    transform: scale(1.5);
+    transition: 0.5s;
+
+}
+
+.arrivals .container section>div .card .text span {
+    color: var(--BackGround);
+
+}
+
+/* <!-- --------------------------------------------EndSection -> Arrivals----------------------------------------------------- --> */
+
+.galary section {
+
+    display: flex;
+    gap: 30px;
+}
+
+.galary section :nth-child(3) {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.galary section .img img:hover {
+
+    transform: scale(1.1);
+
+}
+
+.galary section .img {
+
+    overflow: hidden;
+}
+
+
+/* -----------------------------------------------------------------------------------------EndSection -> Galary----------------------------------------------------- --> */
+
+
+
+.PopularItems .container section .header {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    color: var(--mainColor);
+    margin-bottom: 30px;
+
+
+}
+
+.PopularItems .container section .header p {
+
+    color: #989898;
+
+
+}
+
+.PopularItems .container section .header h2 {
+    font-size: 50px;
+}
+
+.PopularItems .container section>div {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+}
+
+.PopularItems .container section .ContainerCards>div {
+
+    width: calc(33.333% - 15px);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+}
+
+.PopularItems .container section .ContainerCards .card .img {
+    position: relative;
+    border-bottom: 3px solid var(--BackGround);
+    overflow: hidden;
+}
+
+.PopularItems .container section .ContainerCards .card .img button {
+
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--BackGround);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+    height: 50px;
+    transform: translateY(100%);
+    opacity: 1;
+
+}
+
+.PopularItems .container section .ContainerCards .card .img:hover button {
+    transform: translateY(0);
+    opacity: 1;
+
+}
+
+.PopularItems .container section .ContainerCards .card .img i {
+
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    font-size: 25px;
+    opacity: 0;
+    transition: 0.5s;
+
+
+
+}
+
+.PopularItems .container section .ContainerCards .card .img:hover i {
+    opacity: 1;
+}
+
+.PopularItems .container section .ContainerCards .card .img i:hover {
+
+
+    color: red;
+    transform: scale(1.1);
+
+}
+
+.PopularItems .container section {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+}
+
+
+/* ----------------------------------------------------------------------------EndSection -> PopularItems----------------------------------------------------- --> */
+
+
+.choice .container section {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.choice .container section .text {
+
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 40%;
+
+}
+
+.choice .container section .text p {
+    line-height: 1.7;
+    color: #989898;
+    margin-bottom: 20px;
+}
+
+
+
+
+/* ----------------------------------------------------------- End section -> choice----------------------------------------------------- --> */
+
+
+.infromation {
+
+    padding: 30px 0;
+}
+
+.infromation .container section {
+    display: flex;
+    gap: 60px;
+    background-color: var(--BackGround);
+    padding: 50px;
+    color: white;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.infromation .container section div h2 {
+
+    margin: 20px 0;
+}
+
+.infromation .container section div {
+
+    width: 25%;
+}
+
+.infromation .container section div span {
+
+    font-size: 14px;
+}
+
+.infromation .container section div i {
+
+    font-size: 25px;
+}
+
+
+
+
+
+
+/* ---------------------------------------------------End section -> infromation----------------------------------------------------- --> */
+
+.about .container section {
+
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.about .container section div span {
+
+    display: block;
+    color: #989898;
+    margin: 10px 0;
+}
+
+.about .container section div h2 {
+    margin-bottom: 30px;
+}
+
+.about .container section div {
+    width: 33.33%;
+}
+
+.about .container section :nth-child(1) .img {
+    margin-bottom: 30px;
+    width: 150px;
+}
+
+.about .container section :nth-child(1) span {
+
+    line-height: 20px;
+}
+
+/* --------------------------------------------------------------------------End section -> about----------------------------------------------------- --> */
+
+footer .container .section {
+    padding: 50px;
+}
+
+footer .container .section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #989898;
+}
+
+footer .container .section div {
+
+    display: flex;
+    gap: 20px;
+}
+
+footer .container .section div i {
+
+    transition: 0.5s;
+}
+
+footer .container .section div i:hover {
+
+    color: var(--BackGround);
+    transform: scaleX(-1);
+
+}
+
+footer .container .section p span {
+    color: var(--BackGround);
+}
+
+
+
+
+/* responisive */

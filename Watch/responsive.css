@@ -1,0 +1,144 @@
+@media(max-width:768px) {
+
+
+    /* role */
+
+    h1{
+
+        font-size: 25px !important;
+    }
+    h2{
+        font-size: 12px !important;
+    }
+    p{
+        font-size: 10px !important;
+    }
+
+    .container{
+
+
+        width: 100%;
+
+    }
+
+    button{
+
+        font-size: 10px;
+        padding: 10px 15px !important;
+    }
+
+    /* Start Nav */
+    nav .texLinks {
+    display: none;
+    }
+
+    nav {
+        padding: 20px;
+    }
+
+    /* End Nav */
+
+
+
+
+    /* start PerfectStyle */
+    .PerfectStyle .container section .img {
+
+        width: 150px;
+       
+    }
+    .PerfectStyle .container section .text h1 {
+        font-size: 30px;
+    }
+    .PerfectStyle .container section .text p{
+
+        font-size: 10px;
+    }
+
+    /* end PerfectStyle */
+
+
+
+
+
+    /* Arrivals */
+
+
+    .arrivals .container section div{
+
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .arrivals .container section div .card{
+
+
+        width: 50%;
+        padding: 10px;
+
+    }
+    .arrivals .container section div .card .text{
+
+        padding: 10px;
+    }
+
+
+    /* galary */
+
+
+    .galary section{
+
+        display: flex;
+
+        flex-wrap: wrap;
+        
+    }
+
+    /* PopularItems */
+
+
+    .PopularItems .container section .ContainerCards {
+
+
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    .PopularItems .container section .ContainerCards .card{
+        width: 100%;
+    }
+
+
+    /* about */
+
+
+
+
+
+    .about .container section {
+
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.about .container section span{
+
+    font-size: 10px
+}
+.about .container section :nth-child(1) .img{
+
+    width: 60px;
+}
+
+
+
+
+
+
+    
+
+
+
+
+}
