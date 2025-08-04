@@ -69,9 +69,13 @@ function showalert() {
   setTimeout(() => {
     alert.classList.remove("-top-12");
     alert.classList.add("top-12");
+    alert.classList.remove("opacity-0");
+    alert.classList.add("opacity-100");
   }, 0);
 
   setTimeout(() => {
+    alert.classList.remove("opacity-100");
+    alert.classList.add("opacity-0");
     alert.classList.remove("top-12");
     alert.classList.add("-top-12");
   }, 5000);
