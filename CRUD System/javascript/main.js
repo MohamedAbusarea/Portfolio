@@ -118,15 +118,47 @@ reset.addEventListener("click", () => {
   });
 });
 showdata();
+
+
+function noData(){
+
+  transaction.innerHTML=`
+  
+
+  <tr>
+                <td colspan="3" class="px-4 py-12 text-center">
+                    <div class="flex flex-col items-center gap-4">
+                        <i class="fa-solid fa-wallet text-6xl text-gray-300"></i>
+                        <p class="text-gray-500 text-lg">No transactions yet</p>
+                    </div>
+                </td>
+            </tr>
+  
+  `
+
+}
+
+
+
+
 // show data
 function showdata() {
   let data = JSON.parse(localStorage.getItem("data")) || [];
+
+ 
+ console.log(data.length)
+
+ if(data.length == 0){
+
+  noData()
+  return;
+ }
 
   let html = data
     .map((e, index) => {
       return `
                
-        <tr class="divide-x divide-gray-200">
+        <tr id="data" class="divide-x divide-gray-200">
       <td i="${index}" n = "NameUser" class="px-4 py-2 text-sm text-gray-800 text-center">${e.name}</td>
       <td i="${index}" a = "AmountUser"  class="px-4 py-2 text-sm text-gray-800 text-center">${e.amount}</td>
       <td class="px-6 py-2 text-sm text-gray-800">
