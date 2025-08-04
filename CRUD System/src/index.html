@@ -33,33 +33,52 @@
     </div>
 
 
-    <section class="">
-        <div class="container grid grid-cols-1 gap-11 items-center justify-center">
+    <section class="text-center mb-12">
+        <div class="relative">
             <h1
-                class=" relative z-0 m-auto mt-12 title w-fit !text-4xl animate__animated animate__bounce animate__infinite  text-amber-600">
-                Personal
-                Finance Tracker</h1>
-            <div class="relative">
-                <div class=" grid lg:grid-cols-6 grid-cols-1 gap-11 items-center  ">
-                    <div class="flex justify-around lg:col-span-2 items-center  gap-2">
-                        <h2 class=" m-auto text-blue-300">Information data</h2>
-                        <i
-                            class=" fa-brands fa-waze animate__animated animate__bounce animate__infinite animate__slower"></i>
+                class="title text-3xl sm:text-4xl lg:text-5xl font-bold text-amber-600 animate__animated animate__bounce animate__infinite animate__slower mb-4">
+                Personal Finance Tracker
+            </h1>
+            <div class="w-24 h-1 bg-gradient-to-r from-amber-400 to-amber-600 mx-auto rounded-full"></div>
+        </div>
+    </section>
+
+    <!-- Input Form Section -->
+    <section class="mb-12">
+        <div class="bg-white rounded-2xl shadow-xl p-6 sm:p-8 justify-center">
+            <div class="flex items-center justify-center gap-3 mb-6">
+                <h2 class="text-xl sm:text-2xl font-semibold text-blue-600">Add Transaction</h2>
+                <i
+                    class="fa-brands fa-waze text-2xl text-blue-500 animate__animated animate__bounce animate__infinite animate__slower"></i>
+            </div>
+
+            <form id="dataInformatin" class="space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 items-end">
+                    <!-- Name Input -->
+                    <div class="space-y-2">
+                        <label for="name" class="block text-sm font-medium text-gray-700">Transaction Name</label>
+                        <input class="inpvalid w-full" type="text" id="name" placeholder="Transaction Name"
+                            required>
                     </div>
 
-                    <form action="" id="dataInformatin"
-                        class="lg:col-span-4 grid  lg:grid-cols-3 gap-3 grid-cols-1 items-center">
-                        <input class="inpvalid w-full" type="text" id="name" placeholder="Name" required>
-                        <input class="inpvalid w-full" type="number" id="amount" placeholder="Amount" min="1000"
+                    <!-- Amount Input -->
+                    <div class="space-y-2">
+                        <label for="amount" class="block text-sm font-medium text-gray-700">Amount ($)</label>
+                        <input class="inpvalid w-full" type="number" id="amount" placeholder="0.00" min="0" step="0.01"
                             required>
+                    </div>
 
-                        <button type="submit" id="add " class=" !cursor-auto bg-transparent h-fit w-fit ">
-                            <i
-                                class="cursor-pointer !text-4xl text-green-500 hover:text-green-700 transition-all hover:scale-125 fa-solid fa-person-circle-plus h-fit w-fit"></i>
+                    <!-- Submit Button -->
+                    <div class="flex justify-center sm:justify-start">
+                        <button type="submit"
+                            class="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-4 py-2 rounded-lg btn-hover shadow-md flex items-center gap-2 font-medium h-11">
+                            <i class="fa-solid fa-plus"></i>
+                            <span class="hidden sm:inline">Add Transaction</span>
+                            <span class="sm:hidden">Add</span>
                         </button>
-                    </form>
+                    </div>
                 </div>
-            </div>
+            </form>
         </div>
     </section>
 
@@ -76,7 +95,7 @@
     <table id="dataTable" class="min-w-full divide-y divide-gray-200 border border-gray-300 rounded-lg shadow-sm my-11">
         <thead class="bg-gray-100">
             <tr class="divide-x divide-gray-200">
-                <th class="px-4 py-2 text-sm font-semibold text-gray-700 text-center">Name</th>
+                <th class="px-4 py-2 text-sm font-semibold text-gray-700 text-center">Transaction Name</th>
                 <th class="px-4 py-2 text-sm font-semibold text-gray-700 text-center">Salary</th>
                 <th class="px-4 py-2 text-sm font-semibold text-gray-700 text-center">Action</th>
             </tr>
