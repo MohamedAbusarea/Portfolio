@@ -183,8 +183,19 @@
                         <div class="flex flex-wrap gap-3">
                             <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">Fast
                                 Learner</span>
-                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Problem Solver</span>
-                            <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">Team Player</span>
+
+                            <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">Comincation
+                                Skill</span>
+                            <span class="px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm">Time
+                                Management</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">HTML & CSS</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm">JavaScript</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">SQL</span>
+                            <span class="px-3 py-1 bg-lime-100 text-lime-600 rounded-full text-sm">Tailwind CSS</span>
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-600 rounded-full text-sm">Problem
+                                Debugging</span>
+                            <span class="px-3 py-1 bg-red-100 text-red-600 rounded-full text-sm">Git & GitHub</span>
+
                         </div>
                     </div>
 
@@ -381,15 +392,6 @@
             </div>
         </div>
     </section>
-
-
-
-
-
-
-
-
-
 
 
     <!-- Projects Section -->
@@ -675,32 +677,7 @@
         window.addEventListener('scroll', highlightNavLink);
 
 
-
-
-
-
-        // Add loading screen
-        window.addEventListener('load', () => {
-            const loader = document.createElement('div');
-            loader.id = 'loader';
-            loader.className = 'fixed inset-0 z-50 flex items-center justify-center gradient-bg';
-            loader.innerHTML = `
-                <div class="text-center text-white">
-                    <div class="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-white mx-auto mb-4"></div>
-                    <p class="text-xl">Loading Portfolio...</p>
-                </div>
-            `;
-
-            document.body.appendChild(loader);
-
-            setTimeout(() => {
-                loader.style.opacity = '0';
-                setTimeout(() => {
-                    loader.remove();
-                }, 500);
-            }, 1500);
-        });
-
+      
         // Add scroll-to-top button
         const scrollTopBtn = document.createElement('button');
         scrollTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
