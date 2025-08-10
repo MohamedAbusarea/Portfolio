@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/slim-select@latest/dist/slimselect.css" rel="stylesheet">
+
+ <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="./main.css">
+    
+    <title>Weather and Prayer Times</title>
+</head>
+
+<body>
+
+    <!-- Container backgrond -->
+    <div class="bg min-h-screen flex items-center justify-center p-4">
+        <div class=" w-full max-w-6xl h-auto rounded-2xl flex flex-col shadow-xl overflow-hidden">
+
+            <!-- header -->
+            <div class="bg-white rounded-t-2xl">
+                <div class="p-4 sm:p-6 flex flex-col sm:flex-row gap-4 sm:gap-6 justify-around items-center">
+                    <div class="flex gap-4 sm:gap-6 items-center">
+                        <div class="text-5xl sm:text-6xl text-amber-600">
+                            <i class="fa-solid fa-sun-plant-wilt"></i>
+                        </div>
+                        <h1 class="mt-1 font-bold text-xl sm:text-2xl text-gray-800">Weather & Prayer Times</h1>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4  ">
+                        <select id="countries"
+                            class="!w-56 rounded-md border border-gray-300 searchable-select"></select>
+                        <select id="Governorate"
+                            class="!w-56 rounded-md border border-gray-300 searchable-select"></select>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- body -->
+            <div class="grid grid-cols-1 md:grid-cols-2 flex-grow">
+
+
+                <!-- Temp&Description -->
+                <div
+                    class="bg-gradient-to-br from-amber-400 via-amber-500 to-amber-600 p-6 sm:p-8 flex flex-col items-center text-center  xl:rounded-bl-3xl">
+
+
+                    <!-- icon Weather -->
+                    <div class="mb-4 sm:mb-6">
+                        <i
+                            class="text-white text-6xl sm:text-7xl md:text-8xl lg:text-9xl fa-solid fa-cloud-sun drop-shadow-2xl animate-pulse"></i>
+                    </div>
+                    <!-- show temp -->
+                    <span id="temp"
+                        class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-2 sm:mb-4 drop-shadow-lg">
+                        <i class="fa-solid fa-spinner animate-spin"></i>°C
+                    </span>
+                    <!-- show description -->
+                    <span id="description"
+                        class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-white font-medium mb-6 sm:mb-8 drop-shadow-lg">
+                        <i class="fa-solid fa-spinner animate-spin"></i>
+                    </span>
+
+
+                    <div class="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8 mb-6 sm:mb-8 w-full max-w-sm">
+
+                        <!-- box Humidity -->
+                        <div
+                            class="bg-white/20 backdrop-blur-sm rounded-2xl p-3 sm:p-4 border border-white/30 shadow-lg ">
+                            <div class="flex items-center justify-center mb-2">
+                                <i class="fa-solid fa-droplet text-white text-lg mr-2 animate__animated animate__heartBeat animate__infinite"></i>
+                                <span class="text-white text-xs sm:text-sm font-medium opacity-90">Humidity</span>
+                            </div>
+                            <span id="humidity" class="text-lg sm:text-xl md:text-2xl text-white font-bold block"><i
+                                    class="fa-solid fa-spinner animate-spin"></i>%</span>
+                        </div>
+
+
+                        <!-- box wind -->
+                        <div
+                            class="bg-white/20 backdrop-blur-sm rounded-2xl p-3 sm:p-4 border border-white/30 shadow-lg ">
+                            <div class="flex items-center justify-center mb-2">
+                                <i class="fa-solid fa-wind text-white text-lg mr-2 animate__animated animate__tada animate__infinite"></i>
+                                <span class="text-white text-xs sm:text-sm font-medium opacity-90">Wind</span>
+                            </div>
+                            <span id="wind" class="text-lg sm:text-xl md:text-2xl text-white font-bold block"><i
+                                    class="fa-solid fa-spinner animate-spin"></i>
+                                km/h</span>
+                        </div>
+
+                    </div>
+
+                    <!-- box time -->
+                    <div
+                        class="bg-white/20 backdrop-blur-sm rounded-full px-4 sm:px-6 py-2 sm:py-3 border border-white/30 shadow-lg max-w-max mx-auto">
+                        <span id="time"
+                            class="text-white text-xs sm:text-sm md:text-base font-medium opacity-90 flex items-center gap-2">
+
+                            <i class="fa-solid fa-spinner animate-spin"></i>
+                        </span>
+                    </div>
+
+                </div>
+
+                <!-- prayer times -->
+                <div class="prayer bg-white rounded-br-2xl flex items-center justify-center text-gray-700 p-6">
+                    <div class="space-y-3 sm:space-y-4 flex-1">
+                        <!-- Fajr -->
+                        <div
+                            class="animate__backInUp animate__animated  bg-gradient-to-r from-blue-50 to-blue-100 p-4 sm:p-5 rounded-2xl border-l-4 border-blue-400 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 group">
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <i
+                                        class="fa-solid fa-moon text-blue-600 mr-3 sm:mr-4 text-lg sm:text-xl group-hover:scale-200 transition-transform duration-300"></i>
+                                    <span
+                                        class="font-semibold text-gray-800 text-sm sm:text-base md:text-lg">Fajr</span>
+                                </div>
+                                <span id="fajr"
+                                    class="font-mono text-base sm:text-lg md:text-xl text-gray-700 font-bold">04:12
+                                    AM</span>
+                            </div>
+                        </div>
+
+                        <!-- Sunrise -->
+                        <div
+                            class="animate__backInUp animate__animated bg-gradient-to-r from-yellow-50 to-yellow-100 p-4 sm:p-5 rounded-2xl border-l-4 border-yellow-400 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 group">
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <i
+                                        class="fa-solid fa-sun text-yellow-600 mr-3 sm:mr-4 text-lg sm:text-xl group-hover:scale-200 transition-transform duration-300"></i>
+                                    <span
+                                        class="font-semibold text-gray-800 text-sm sm:text-base md:text-lg">Sunrise</span>
+                                </div>
+                                <span id="sunrise"
+                                    class="font-mono text-base sm:text-lg md:text-xl text-gray-700 font-bold">05:47
+                                    AM</span>
+                            </div>
+                        </div>
+
+                        <!-- Dhuhr -->
+                        <div
+                            class="animate__backInUp animate__animated bg-gradient-to-r from-orange-50 to-orange-100 p-4 sm:p-5 rounded-2xl border-l-4 border-orange-400 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 group">
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <i
+                                        class="fa-solid fa-sun text-orange-600 mr-3 sm:mr-4 text-lg sm:text-xl group-hover:scale-200 transition-transform duration-300"></i>
+                                    <span
+                                        class="font-semibold text-gray-800 text-sm sm:text-base md:text-lg">Dhuhr</span>
+                                </div>
+                                <span id="dhuhr"
+                                    class="font-mono text-base sm:text-lg md:text-xl text-gray-700 font-bold">12:01
+                                    PM</span>
+                            </div>
+                        </div>
+
+                        <!-- Asr -->
+                        <div
+                            class="animate__backInUp animate__animated bg-gradient-to-r from-amber-50 to-amber-100 p-4 sm:p-5 rounded-2xl border-l-4 border-amber-400 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 group">
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <i
+                                        class="fa-solid fa-sun text-amber-600 mr-3 sm:mr-4 text-lg sm:text-xl group-hover:scale-200 transition-transform duration-300"></i>
+                                    <span class="font-semibold text-gray-800 text-sm sm:text-base md:text-lg">Asr</span>
+                                </div>
+                                <span id="asr"
+                                    class="font-mono text-base sm:text-lg md:text-xl text-gray-700 font-bold">03:25
+                                    PM</span>
+                            </div>
+                        </div>
+
+                        <!-- Maghrib -->
+                        <div
+                            class="animate__backInUp animate__animated bg-gradient-to-r from-red-50 to-red-100 p-4 sm:p-5 rounded-2xl border-l-4 border-red-400 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 group">
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <i
+                                        class="fa-solid fa-sun text-red-600 mr-3 sm:mr-4 text-lg sm:text-xl group-hover:scale-200 transition-transform duration-300"></i>
+                                    <span
+                                        class="font-semibold text-gray-800 text-sm sm:text-base md:text-lg">Maghrib</span>
+                                </div>
+                                <span id="maghrib"
+                                    class="font-mono text-base sm:text-lg md:text-xl text-gray-700 font-bold">06:16
+                                    PM</span>
+                            </div>
+                        </div>
+
+                        <!-- Isha -->
+                        <div
+                            class="animate__backInUp animate__animated bg-gradient-to-r from-blue-100 to-blue-300 p-4 sm:p-5 rounded-2xl border-l-4 border-blue-400 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 group">
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <i
+                                        class="fa-solid fa-moon text-blue-900 mr-3 sm:mr-4 text-lg sm:text-xl group-hover:scale-200 transition-transform duration-300"></i>
+                                    <span
+                                        class="font-semibold text-gray-800 text-sm sm:text-base md:text-lg">Isha</span>
+                                </div>
+                                <span id="isha"
+                                    class="font-mono text-base sm:text-lg md:text-xl text-gray-700 font-bold">04:12
+                                    AM</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://unpkg.com/slim-select@latest/dist/slimselect.min.js"></script>
+    <script src="./main.js"></script>
+    <script src="./api.js"></script>
+    <script>
+
+
+    </script>
+
+</body>
+
+</html>

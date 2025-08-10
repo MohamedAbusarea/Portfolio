@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+
+/* style slim select  */
+.select2-container--default .select2-selection--single {
+  @apply  border-2 border-fuchsia-600 rounded-md h-10 px-3 flex items-center text-gray-700 focus:outline-none;
+}
+
+.select2-container--default.select2-container--focus .select2-selection--single {
+  @apply border-blue-500 ring-2 ring-blue-100;
+}
+
